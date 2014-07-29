@@ -1,0 +1,80 @@
+.link {
+    stroke: #000;
+    stroke-width: 3px;
+}
+.nodetext, .linetext {
+    font: 12px sans-serif;
+    -webkit-user-select:none;
+    -moze-user-select:none;
+    text-anchor: middle;
+}
+.node a {
+    fill: rgb(113, 157, 171);
+    stroke: rgb(113, 157, 171);
+}
+.nodeCircle {
+    stroke: #aaa;
+    stroke-width: 5px;
+    fill: #333;
+    opacity: 0.6;
+}
+.node.fixed .nodeCircle {
+    stroke: #666;
+    fill: #000;
+    opacity: 0.8;
+}
+#markerEnd, #markerStart {
+    stroke:#ccc;
+    fill:#fff;
+    stroke-width: 2px;
+}
+#container {
+    width:800px;
+    height:600px;
+    border:1px solid gray;
+    border-radius:5px;
+    position:relative;
+    margin:20px;
+    background: #eee;
+}
+.tooltip {
+    position: absolute;
+    width: 200px;
+    line-height: 20px;
+    padding: 10px;
+    font: 12px sans-serif;
+    color: rgb(113, 157, 171);
+    background: rgb(255, 255, 255);
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+    opacity: 0;
+    display: none;
+}
+.tooltip:after {
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #FFFFFF transparent transparent;
+    top: 10px;
+    left: -25px;
+}
+.tooltip .head {
+    font: 12px sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.tooltip .closeBtn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.tooltip.locked .closeBtn {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
